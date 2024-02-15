@@ -1,0 +1,91 @@
+
+
+<div class="flex w-full  text-gray-300 px-14 font-main font-semibold relative z-50 mt-5 "  >
+    <div class="w-1/3 flex justify-start items-center " >
+       <ul class="flex cursor-pointer mt-1.5 ">
+           <li >
+            <button (click)="toggleMenu()">
+               <img width="25px" height="25px" src="./assets/icon-menu.png"  alt="">
+            </button>
+               @if(menuOpen) {
+                  <div  [ngClass]="menuOpen ? 'slideLeft' : 'slideRight'" class=" fixed flex-col  whitespace-nowrap left-0 top-0 h-full  px-14 xl:w-fit w-64 bg-gray-950 text-gray-400 xl:text-xl text-sm" >
+                <ul class="mt-8 ">
+                  <li class="mb-5">
+                  <button (click)="toggleMenu()">
+                  <img width="25px" height="25px" src="./assets/x icon.png" alt="">
+               </button>
+                  </li>
+                  <li class="mb-5 hover:text-white ">Strona główna</li>
+                  <li class="mb-5 hover:text-white">Filmy</li>
+                  <li class="mb-5 hover:text-white">Seriale</li>
+                  <li class="mb-5 hover:text-white">Origins</li>
+                  <li class="mb-5 hover:text-white">Na czasie</li>
+                  <li class="mb-10 hover:text-white">Ostatnio dodane</li>
+                  <button (click)="toggleMenuSecond()">
+                  <li class="mb-5 hover:text-white pt-4 pb-4 border-t border-b">Gatunki <a class="inline-flex align-middle ml-28 xl:ml-24"><img width="15px" height="15px" src="./assets/arrow right.png" alt=""></a>
+                     @if(menuOpenSecond){
+                        <div [ngClass]="menuOpen ? 'slideLeft' : 'slideRight'" class="fixed flex-col  whitespace-nowrap xl:left-72  left-60 xl:text-xl text-sm  top-0 h-full  px-14  bg-gray-950 text-gray-400  ">
+                     <ul class="py-20">
+                        <li class="mb-5 hover:text-white ">
+                           Akcja
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Animacja
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Komedie
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Dokumenty
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Dramaty
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Europejskie
+                        </li>
+                        <li class="mb-5 hover:text-white ">  
+                           Fantasy i sci-fi
+                        </li>
+                        <li class="mb-5 hover:text-white ">  
+                           Horrory
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Familijne
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Polskie produkcje
+                        </li>
+                        <li class="mb-5 hover:text-white ">
+                           Reality show
+                        </li>
+                     </ul>
+                  </div>
+                     }
+                  </li>
+                  </button>
+                </ul>
+               </div>
+               }
+              </li>
+     
+           <li class="ml-5 hidden md:block hover:text-white">Filmy</li>
+           <li class="ml-5  hidden md:block hover:text-white">Seriale</li>
+       </ul>
+    </div>
+    <h3 class="w-1/3 text-white text-4xl text-center font-body">
+       <a class="font-semibold uppercase">HBO</a>
+       <a class="text-5xl">MAX</a>
+    </h3>
+    <div class="w-1/3 flex justify-end items-center ">
+        <ul class="flex cursor-pointer">
+        <li> <img width="25px" height="25px"  src="./assets/magnifer.png" alt=""></li>
+        <li class="ml-5  hover:text-white hidden lg:block">Zaloguj się</li>
+        <li class="ml-5  hidden lg:block " ><button class="bg-transparent-gray rounded px-1 hover:bg-white hover:text-black">Subskrybuj</button></li>
+        <li> <img width="25px" height="25px" src="./assets/avatar.png" class="block lg:hidden ml-5  hover:border-2 hover:border-white rounded-xl" alt=""></li>
+        </ul>
+       
+
+    </div>
+
+ </div>
